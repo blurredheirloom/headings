@@ -44,7 +44,7 @@ function App() {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       fixHeadings(headings, setHeadings, allowSame);
-    }, 500)
+    }, 1500)
     return () => clearTimeout(delayDebounceFn)
   },[headings])
 

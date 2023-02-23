@@ -27,4 +27,4 @@ export const MIN_SIZE = 4;
 export const MAX_SIZE = 42;
 export const MAX_HEADER_SIZE = 18;
 export const MIN_HEADER_SIZE = 1;
-export const STEP = 0.25;
+export const STEP = 0.05;
