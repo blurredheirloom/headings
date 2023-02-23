@@ -128,4 +128,4 @@ const toggleCode = (x, setShowCode) => {
 }
 
 
-export { getUnitVal, changeUnits, loadText, getNormalized, handleClickScroll, toggleSame, loadPreset, setHeading, toggleCode, fixHeadings, fixFontSize, isFontSizeAllowed }
+export { getUnitVal, changeUnits, loadText, getNormalized, handleClickScroll, toggleSame, loadPreset, setHeading, toggleCode, fixHeadings, fixFontSize, isFontSizeAllowed, found }

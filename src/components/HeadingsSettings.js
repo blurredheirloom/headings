@@ -1,11 +1,11 @@
 /* Headings Settings Component */
 
 import { MDBRow, MDBInputGroup, MDBTooltip, MDBBtn, MDBDropdown, MDBDropdownItem, MDBDropdownMenu, MDBDropdownToggle } from 'mdb-react-ui-kit';
-import { getUnitVal } from '../utils/functions';
-import { PT, PX, PERC, STEP, MIN_HEADER_SIZE, MAX_HEADER_SIZE, DEFAULT_REMS } from '../utils/constants';
+import { getUnitVal, found } from '../utils/functions';
+import { PT, PX, PERC, STEP, MAX_HEADER_SIZE, DEFAULT_REMS } from '../utils/constants';
 
 function HeadingsSettings(props) {
-    const { headings, setHeading, fontSize, units, changeUnits } = props;
+    const { headings, setHeading, fontSize, units, changeUnits, currentPreset } = props;
     return(
         <div className='col-lg-9 offset-lg-1 mt-4 py-4 px-4'>
         {
@@ -34,7 +34,7 @@ function HeadingsSettings(props) {
                     <div className='col-md-3 col-6'>
                     <MDBInputGroup textAfter='rem'>
                         <MDBTooltip tag='div' placement="bottom" title="RESET">
-                        <MDBBtn className="btn btn-primary tip" onClick={() => setHeading(found(DEFAULT_REMS, preset).values[index], index)}>
+                        <MDBBtn className="btn btn-primary tip" onClick={() => setHeading(found(DEFAULT_REMS, currentPreset).values[index], index)}>
                             <i className="fas fa-eraser"></i>
                         </MDBBtn>
                         </MDBTooltip>
@@ -49,9 +49,9 @@ function HeadingsSettings(props) {
                             <span>{units[index]}</span>
                         </MDBDropdownToggle>
                         <MDBDropdownMenu className='text-uppercase'>
-                            <MDBDropdownItem link onClick={(e) => changeUnits(e.target.text, index)}>{PX}</MDBDropdownItem>
-                            <MDBDropdownItem link onClick={(e) => changeUnits(e.target.text, index)}>{PT}</MDBDropdownItem>
-                            <MDBDropdownItem link onClick={(e) => changeUnits(e.target.text, index)}>{PERC}</MDBDropdownItem>
+                            <MDBDropdownItem link onClick={(e) => {e.preventDefault(); changeUnits(e.target.text, index)}}>{PX}</MDBDropdownItem>
+                            <MDBDropdownItem link onClick={(e) => {e.preventDefault(); changeUnits(e.target.text, index)}}>{PT}</MDBDropdownItem>
+                            <MDBDropdownItem link onClick={(e) => {e.preventDefault(); changeUnits(e.target.text, index)}}>{PERC}</MDBDropdownItem>
                         </MDBDropdownMenu>
                         </MDBDropdown>
                     </MDBInputGroup>

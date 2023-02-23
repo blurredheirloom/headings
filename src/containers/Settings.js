@@ -9,7 +9,7 @@ import HeadingsSettings from '../components/HeadingsSettings';
 import { handleClickScroll } from '../utils/functions';
 
 function Settings(props) {
-    const { activeFont, onChangeFont, onReset, onChangeSize, value, onCheck, loadPresets, allowSame, selected, onChangePreviewText, setCustomText, customText, isCustom, headings, setHeading, units, changeUnits } = props;
+    const { activeFont, onChangeFont, onReset, onChangeSize, value, onCheck, loadPresets, allowSame, selected, onChangePreviewText, setCustomText, customText, isCustom, headings, setHeading, units, changeUnits, currentPreset } = props;
     return (
         <MDBRow id="settings" className='py-4'>
             <div className='col-sm-6'>
@@ -51,6 +51,7 @@ function Settings(props) {
                 setHeading={setHeading} 
                 fontSize={value} 
                 changeUnits={changeUnits}
+                currentPreset={currentPreset}
             />
         </MDBRow>
     )

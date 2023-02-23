@@ -72,6 +72,7 @@ function App() {
         setHeading={(value, index) => setHeading(value, index, headings, setHeadings)}
         units={units}
         changeUnits={(value, index) => changeUnits(value, index, units, setUnits)}
+        currentPreset={preset}
       />
       <Divider />
       <Preview title="Preview" fontSize={fontSize} headings={headings} text={text}/>
