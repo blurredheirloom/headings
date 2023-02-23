@@ -1,0 +1,221 @@
+:root {
+  --text-color: #f2f2f2;
+  --title-color: #03A9F4;
+  --body-color: #181616;
+  --container-color: #212121;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+html, body {
+  background-color: var(--body-color);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#font-picker {
+  width: 100%;
+}
+
+#font-picker .dropdown-button {
+  background-color: white !important;
+  color: var(--body-color);
+  border-radius: .2rem;
+}
+
+#font-picker .font-list {
+  background-color: white !important;
+  color: var(--body-color);
+  margin-top: -3px;
+  z-index: 9999;
+  border-radius: 0 0 .2rem .2rem;
+}
+
+.text-blue {
+  color: var(--title-color) !important;
+}
+
+.btn-primary, .range .thumb:after, .thumb-value {
+  background: var(--title-color) !important;
+}
+
+.thumb-value {
+  border-radius: 50%;
+}
+
+.dropdown {
+  padding: 0 !important;
+}
+
+.dropdown button span {
+  background-color: var(--title-color) !important;
+}
+
+.dropdown button {
+  border-radius: 0 .25rem .25rem 0 !important;
+}
+
+.dropdown-toggle::after {
+  margin-left: .3rem !important;
+}
+
+.dropdown-menu {
+  text-align: right !important;
+  border-radius: 0 0 .25rem .25rem !important;
+}
+
+.badge {
+  font-size: 1rem !important;
+  text-transform: uppercase;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 a, h1 a:hover, h1 a:active, h1 a:visited {
+  color: var(--title-color) !important;
+}
+
+a, a:hover,a:active, a:visited {
+  color: var(--body-color) !important;
+}
+
+pre {
+  border-radius: .3rem;
+  -webkit-user-select: text;
+  -webkit-touch-callout: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.disabled, .disabled span, .disabled input{
+  background-color: var(--container-color) !important;
+  color: var(--text-color) !important;
+  font-weight: bold !important;
+  border-color: #333;
+}
+
+.input-group-text {
+  background-color: var(--container-color) !important;
+  color: var(--text-color) !important;
+}
+
+.btn {
+  box-shadow: none !important;
+  height: 100%;
+}
+
+.btn label {
+  cursor: pointer;
+  padding-left: 1rem;
+}
+
+.btn.tip {
+  border-radius: 0.3em 0 0 0.3em !important;
+}
+
+.form-check-input {
+  margin-top: .4em !important;
+}
+
+.hr {
+  background-color: var(--container-color) !important;
+}
+
+.ripple {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.reduced {
+  font-size: 1.5em;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: .5;
+  font-size: 1rem;
+}
+
+.details li {
+  padding-right: 1.2rem;
+}
+
+.details li:last-child {
+  padding-right:  0;
+}
+
+.details li::after {
+  padding-left: 1.2rem;
+  content: '\25cf';
+}
+
+.details li:last-child:after {
+  display: none;
+}
+
+h4 span {
+  background-color: var(--container-color) !important;
+  color: var(--text-color) !important;
+}
+
+.dark{
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+  background-color: var(--container-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--title-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
+::-webkit-slider-thumb {
+  background: var(--title-color) !important;
+}
+::-moz-range-thumb {
+  background: var(--title-color) !important;
+}
+::-ms-thumb {
+  background: var(--title-color) !important;
+}
+
+.form-switch .form-check-input:checked[type=checkbox]:after, .form-switch .form-check-input[type=checkbox]:after{
+  background: var(--title-color) !important;
+}
+
+.form-check-input[type=checkbox], .form-check-input[type=checkbox]:checked {
+  background: var(--text-color) !important;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
