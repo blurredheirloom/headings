@@ -8,9 +8,9 @@ const getUnitVal = (value, unit, heading) => {
     switch(unit)
     {
       case PX:
-      return value * heading;
+      return Number(parseFloat(value * heading).toFixed(2));
       case PT:
-      return parseFloat(value * .75 * heading).toFixed(2);
+      return Number(parseFloat(value * .75 * heading).toFixed(2));
       case PERC:
       return heading * 100;
     }
@@ -78,10 +78,8 @@ const fixHeadings = (headings, setHeadings, allowSame) => {
   let arr = [...headings];
   for(let i=0; i<headings.length; i++)
   {
-    if(i!=5 && i!=0 && !allowSame)
+    if(i!=5 && !allowSame)
       arr[i] = getNormalized(arr[i], (parseFloat(arr[i+1])+STEP).toFixed(2), MAX_HEADER_SIZE);
-    else if(i==0 && !allowSame)
-      arr[i] = getNormalized(arr[i], MIN_HEADER_SIZE+1+STEP, MAX_HEADER_SIZE);
     else
       arr[i] = getNormalized(arr[i], MIN_HEADER_SIZE, MAX_HEADER_SIZE);
     if(arr[i]>=arr[i-1] && i>0)
