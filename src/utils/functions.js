@@ -12,7 +12,7 @@ const getUnitVal = (value, unit, heading) => {
       case PT:
       return Number(parseFloat(value * .75 * heading).toFixed(2));
       case PERC:
-      return heading * 100;
+      return Math.round(heading * 100);
     }
 }
 
