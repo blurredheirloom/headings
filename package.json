@@ -1,8 +1,9 @@
 {
-  "name": "mdb-react-template",
-  "version": "5.1.0",
-  "description": "template for mdb-react-ui-kit",
+  "name": "headings",
+  "version": "1.0.0",
+  "description": "HTML Headings - Typography Calculator",
   "private": true,
+  "homepage": "https://blurredheirloom.github.io/headings",
   "dependencies": {
     "font-picker-react": "^3.5.2",
     "mdb-react-ui-kit": "5.1.0",
@@ -13,6 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
