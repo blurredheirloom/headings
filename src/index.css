@@ -252,6 +252,10 @@ h1 a, h1 a:hover, h1 a:active, h1 a:visited {
 .details li:last-child:after {
   display: none;
 }
+
+.apply-font {
+  padding-bottom: .5rem;
+}
 /* ------------------------------------------- */
 
 /* -------------------------------------------------------------- */
