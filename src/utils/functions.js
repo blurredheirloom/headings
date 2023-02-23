@@ -78,8 +78,10 @@ const fixHeadings = (headings, setHeadings, allowSame) => {
   let arr = [...headings];
   for(let i=0; i<headings.length; i++)
   {
-    if(i!=5 && !allowSame)
-      arr[i] = getNormalized(arr[i], MIN_HEADER_SIZE+STEP, MAX_HEADER_SIZE);
+    if(i!=5 && i!=0 && !allowSame)
+      arr[i] = getNormalized(arr[i], arr[i+1]+STEP, MAX_HEADER_SIZE);
+    else if(i==0 && !allowSame)
+      arr[i] = getNormalized(arr[i], MIN_HEADER_SIZE+1+STEP, MAX_HEADER_SIZE);
     else
       arr[i] = getNormalized(arr[i], MIN_HEADER_SIZE, MAX_HEADER_SIZE);
     if(arr[i]>=arr[i-1] && i>0)
